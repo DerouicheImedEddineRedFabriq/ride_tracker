@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.pluralsight.dto.RideDto;
 import com.pluralsight.model.Ride;
 import com.pluralsight.repository.RideRepository;
 
@@ -17,5 +18,10 @@ public class RideServiceImpl implements RideService {
 	@Override
 	public List<Ride> getRides() {
 		return rideRepository.getRides();
+	}
+
+	@Override
+	public Ride createRide(Ride ride) {
+		return rideRepository.createRide(ride);
 	}
 }
